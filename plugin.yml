@@ -1,0 +1,25 @@
+name: ExamplePlugin #Name of the plugin
+api: 4.0.0
+author: JinodkDevTeam #Author Name or use "authors" for more than two authors.
+main: JinodkDevTeam\ExamplePlugin\Main #Directory to main class
+src-namespace-prefix: JinodkDevTeam\ExamplePlugin #For PSR-4 format
+version: 0.0.1 #Version of the plugin
+
+commands: #List plugin command
+  allowbreak:
+    permission: example.allowbreak #Add this permission to this command
+  giveapple:
+    permission: example.giveapple
+  pos:
+    permission: example.pos
+
+permissions: #List plugin permissions
+  example.allowbreak:
+    default: op #OP use only
+    description: Allow player use /allowbreak command
+  example.giveapple:
+    default: true #Everyone can use
+    description: Allow player use /giveapple command
+  example.pos:
+    default: true
+    description: Allow player use /pos command
