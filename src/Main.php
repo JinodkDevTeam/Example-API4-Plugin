@@ -94,6 +94,7 @@ class Main extends PluginBase implements Listener{ //Main class MUST extends Plu
 		 * @priority implement event priority:
 		 * LOWEST->LOW->NORMAL->HIGH->HIGHEST->MONITOR
 		 * @handleCancelled when it false, if this event was cancelled, this function will be ignored.
+		 * WARNING: Since 4.0.0-BETA5, use @handleCancelled on uncancellable event may cause server crash (like PlayerQuitEvent)
 		 */
 		if (!$this->allowbreak){ //If allow break is false, cancel this event
 			$event->cancel();
